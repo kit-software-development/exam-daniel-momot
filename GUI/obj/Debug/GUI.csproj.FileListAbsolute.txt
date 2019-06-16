@@ -1,0 +1,8 @@
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\bin\Debug\GUI.exe.config
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\bin\Debug\GUI.exe
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\bin\Debug\GUI.pdb
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\obj\Debug\GUI.exe
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\GUI\obj\Debug\GUI.pdb

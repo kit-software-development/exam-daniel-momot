@@ -1,0 +1,13 @@
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\bin\Debug\Client.exe.config
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\bin\Debug\Client.exe
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\bin\Debug\Client.pdb
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\MSD.Client.Controls.GameFieldControl.resources
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\MSD.Client.Forms.AboutBoxForm.resources
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\MSD.Client.Forms.MainForm.resources
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\Client.exe
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\Client.pdb
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\bin\Debug\Library.dll
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Client\bin\Debug\Library.pdb

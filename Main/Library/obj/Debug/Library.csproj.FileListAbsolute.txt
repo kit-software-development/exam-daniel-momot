@@ -1,0 +1,5 @@
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\bin\Debug\Library.dll
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\bin\Debug\Library.pdb
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\obj\Debug\Library.dll
+C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\obj\Debug\Library.pdb

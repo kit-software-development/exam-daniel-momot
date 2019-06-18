@@ -30,7 +30,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-bin/Debug/Client.exe
+Client.exe
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

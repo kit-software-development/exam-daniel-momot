@@ -13,6 +13,7 @@
 *.sln.docstates
 
 # Build results
+Client/bin/
 **/[Dd]ebug/
 **/x64/**/*
 **/[Rr]elease/**/*

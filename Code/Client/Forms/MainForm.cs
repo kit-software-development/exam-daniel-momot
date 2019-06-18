@@ -28,8 +28,6 @@ namespace MSD.Client.Forms
             onClose(this, new FormClosedEventArgs(CloseReason.None));
         }
 
-
-
         private void onNew(object sender, EventArgs e)
         {
             gameFieldControl.GameAdapter.Game.Start();

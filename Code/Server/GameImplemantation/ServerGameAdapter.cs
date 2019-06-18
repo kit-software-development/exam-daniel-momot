@@ -33,6 +33,7 @@ namespace MSD.Server.GameImplemantation
         /// Событие вызывается для отправки собщения клиенту
         /// </summary>
         private event Library.TCP.EventHandler<GameEventArgs> GameEvent;
+        Thread listener;
 
         /// <summary>
         /// Отвечает за взаимодействие по TCP игрового движка с клиентом
@@ -44,7 +45,7 @@ namespace MSD.Server.GameImplemantation
             Receiver = new TCPReceiver(8010);
 
             // На случай появления команд от клиента, запускаем поток, слушающий TCP-сообщения
-            Thread listener = new Thread(Listen);
+            listener = new Thread(Listen);
             listener.Start();
             listener.IsBackground = false;
 
@@ -66,7 +67,7 @@ namespace MSD.Server.GameImplemantation
         public void Stop(object sender, LoseEventArgs args)
         {
             listener_stop = true;
-            //listener.IsBackground = true;
+            listener.IsBackground = true;
         }
 
         private void Listen()

@@ -19,7 +19,6 @@ namespace MSD.Library.TCP
         /// <param name="port"></param>
         public TCPSender(int port)
         {
-            client = new TcpClient();
             endpoint = new IPEndPoint(IPAddress.Loopback, port);
         }
 
@@ -35,7 +34,7 @@ namespace MSD.Library.TCP
                 Send(message);
                 Disconnect();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 // Срабатывает, если какое-либо из действий блока try не удалось выполнить после трех попыток
                 TCPExceptionOccured?.Invoke(this, new ExceptionArgs("Socket error at port " + endpoint.Port + ": " + e.Message, "Sending message error"));
@@ -49,12 +48,14 @@ namespace MSD.Library.TCP
             {
                 try
                 {
-                    client.Connect(endpoint);
-                    break;
+                    if (!client.Connected)
+                    {
+                        client.Connect(endpoint);
+                    }
+                    return;
                 }
                 catch (Exception) { }
             }
-            client.Connect(endpoint);
         }
         private void Send(string message)
         {
@@ -63,11 +64,10 @@ namespace MSD.Library.TCP
                 try
                 {
                     client.Send(message);
-                    break;
+                    return;
                 }
                 catch (Exception) { }
             }
-            client.Send(message);
         }
         private void Disconnect()
         {
@@ -77,12 +77,10 @@ namespace MSD.Library.TCP
                 {
                     client.Client.Disconnect(false);
                     client.Dispose();
-                    break;
+                    return;
                 }
                 catch (Exception) { }
             }
-            client.Client.Disconnect(false);
-            client.Dispose();
         }
 
 

@@ -14,10 +14,12 @@ namespace MSD.Library.Core.Commands
         /// <summary>
         /// Восстановление команды из строкового представления. Если команда не распознана, возвращает null
         /// </summary>
-        /// <param name="message">Строковое представление команды вида Stop или Push:5</param>
+        /// <param name="message">Строковое представление команды вида |Stop| или |Push:5|</param>
         /// <returns></returns>
         public static AbstractCommand Decode(string message)
         {
+            if (message == null || message == "")
+                return null;
             // message = "|Push:5|/n/r"
             message = message.Substring(1, message.IndexOf('|', 1) - 1);
             // message = "Push:5"

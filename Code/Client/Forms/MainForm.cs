@@ -72,12 +72,16 @@ namespace MSD.Client.Forms
         {
             gameFieldControl.GameAdapter.Game.Stop();
 
-            if (e != null)
-                MessageBox.Show("Your result: " + (e as LoseEventArgs).Result, "Game is over",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                MessageBox.Show("Accepting result is impossible", "Game is over",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            // Если игра закончилась по запросу сервера
+            if (e is LoseEventArgs)
+            {
+                if (e != null)
+                    MessageBox.Show("Your result: " + (e as LoseEventArgs).Result, "Game is over",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show("Accepting result is impossible", "Game is over",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void onClose(object sender, FormClosedEventArgs e)

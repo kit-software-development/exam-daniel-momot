@@ -52,8 +52,6 @@ namespace MSD.Server.GameImplemantation
             // При появлении внутриигровых событий, влияющих на интерфейс, генерируется единое событие GameEvent...
             Game.ChangeHpEvent += (object sender, ChangeHpEventArgs args) =>
                 GameEvent?.Invoke(this, new GameEventArgs(new ChangeHpCommand(args.Hp_new)));
-            Game.LoseEvent += (object sender, LoseEventArgs args) =>
-                GameEvent?.Invoke(this, new GameEventArgs(new LoseCommand(args.Result)));
             Game.LoseEvent += Stop;
             Game.RiseNewEvent += (object sender, RiseNewEventArgs args) =>
                 GameEvent?.Invoke(this, new GameEventArgs(new RiseNewCommand(args.Places)));
@@ -66,6 +64,7 @@ namespace MSD.Server.GameImplemantation
 
         public void Stop(object sender, LoseEventArgs args)
         {
+            GameEvent?.Invoke(this, new GameEventArgs(new LoseCommand(args.Result)));
             listener_stop = true;
             listener.IsBackground = true;
         }

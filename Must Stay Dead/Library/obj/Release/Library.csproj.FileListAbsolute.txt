@@ -1,4 +1,0 @@
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\bin\Release\Library.dll
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\bin\Release\Library.pdb
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\obj\Release\Library.dll
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Library\obj\Release\Library.pdb

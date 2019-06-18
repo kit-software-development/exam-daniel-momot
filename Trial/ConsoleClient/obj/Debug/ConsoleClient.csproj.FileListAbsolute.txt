@@ -1,6 +1,0 @@
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\ConsoleClient\bin\Debug\ConsoleClient.exe.config
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\ConsoleClient\bin\Debug\ConsoleClient.exe
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\ConsoleClient\bin\Debug\ConsoleClient.pdb
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\ConsoleClient\obj\Debug\ConsoleClient.exe
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\ConsoleClient\obj\Debug\ConsoleClient.pdb

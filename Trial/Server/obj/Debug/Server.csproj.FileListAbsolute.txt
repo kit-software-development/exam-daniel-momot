@@ -1,6 +1,0 @@
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Server\bin\Debug\Server.exe.config
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Server\bin\Debug\Server.exe
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Server\bin\Debug\Server.pdb
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Server\obj\Debug\Server.exe
-C:\Users\Admin\Documents\Универ\Технологии программирования (на С#)\Экзаменационный проект\Must Stay Dead\Server\obj\Debug\Server.pdb

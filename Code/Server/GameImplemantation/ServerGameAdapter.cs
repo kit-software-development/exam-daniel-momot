@@ -24,7 +24,7 @@ namespace MSD.Server.GameImplemantation
         /// Игровой движок
         /// </summary>
         private ServerGameEngine Game;
-        private Thread listener;
+        //private Thread listener;
         /// <summary>
         /// Когда true, не слушаем сообщения от клиента
         /// </summary>
@@ -44,7 +44,7 @@ namespace MSD.Server.GameImplemantation
             Receiver = new TCPReceiver(8010);
 
             // На случай появления команд от клиента, запускаем поток, слушающий TCP-сообщения
-            listener = new Thread(Listen);
+            Thread listener = new Thread(Listen);
             listener.Start();
             listener.IsBackground = false;
 
@@ -53,6 +53,7 @@ namespace MSD.Server.GameImplemantation
                 GameEvent?.Invoke(this, new GameEventArgs(new ChangeHpCommand(args.Hp_new)));
             Game.LoseEvent += (object sender, LoseEventArgs args) =>
                 GameEvent?.Invoke(this, new GameEventArgs(new LoseCommand(args.Result)));
+            Game.LoseEvent += Stop;
             Game.RiseNewEvent += (object sender, RiseNewEventArgs args) =>
                 GameEvent?.Invoke(this, new GameEventArgs(new RiseNewCommand(args.Places)));
             Game.RiseProgressEvent += (object sender, RiseProgressEventArgs args) =>
@@ -60,6 +61,12 @@ namespace MSD.Server.GameImplemantation
 
             // ... которое затем отправляется клиенту
             GameEvent += Send;
+        }
+
+        public void Stop(object sender, LoseEventArgs args)
+        {
+            listener_stop = true;
+            //listener.IsBackground = true;
         }
 
         private void Listen()

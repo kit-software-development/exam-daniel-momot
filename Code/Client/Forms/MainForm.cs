@@ -25,7 +25,7 @@ namespace MSD.Client.Forms
             MessageBox.Show(e.Text, e.Title,
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            Dispose();
+            onClose(this, new FormClosedEventArgs(CloseReason.None));
         }
 
 
@@ -75,11 +75,17 @@ namespace MSD.Client.Forms
             gameFieldControl.GameAdapter.Game.Stop();
 
             if (e != null)
-                MessageBox.Show("Ваш результат: " + (e as LoseEventArgs).Result, "Игра завершена",
+                MessageBox.Show("Your result: " + (e as LoseEventArgs).Result, "Game is over",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
-                MessageBox.Show("Не удалось получить результат", "Игра завершена",
+                MessageBox.Show("Accepting result is impossible", "Game is over",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void onClose(object sender, FormClosedEventArgs e)
+        {
+            gameFieldControl.GameAdapter.Stop();
+            Application.Exit();
         }
     }
 }

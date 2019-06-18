@@ -27,6 +27,7 @@ namespace MSD.Client.Game
         /// Когда true, не слушаем сообщения от сервера
         /// </summary>
         private bool listener_stop = false;
+        Thread listener;
 
         /// <summary>
         /// Инкапсулирует GameController. Расшифровывает сообщения с TCP-сервера и передает их игре
@@ -41,9 +42,15 @@ namespace MSD.Client.Game
             (Game as ClientGameController).GameEvent += Send;
 
             // На случай появления команд от клиента, запускаем поток, слушающий TCP-сообщения
-            Thread listener = new Thread(Listen);
+            listener = new Thread(Listen);
             listener.Start();
             listener.IsBackground = false;
+        }
+
+        public void Stop()
+        {
+            listener_stop = true;
+            listener.IsBackground = true;
         }
 
 
@@ -86,7 +93,6 @@ namespace MSD.Client.Game
                                 (command as RiseProgressCommand).Place,
                                 (command as RiseProgressCommand).Stage);
                         }
-                        // Других случаев быть не может, т.к. нераспознанная команда равна null
                     }
                 }
             }

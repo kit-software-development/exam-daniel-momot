@@ -200,6 +200,7 @@
             this.MinimumSize = new System.Drawing.Size(404, 467);
             this.Name = "MainForm";
             this.Text = "Must Stay Dead!";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onClose);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.statusBar.ResumeLayout(false);

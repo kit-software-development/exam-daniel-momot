@@ -29,15 +29,23 @@ namespace MSD.Library.TCP
         /// <param name="message">Текст сообщения. В рамках данного приложения - команда</param>
         public void SendMessage(string message)
         {
-            Connect();
-            Send(message);
-            Disconnect();
+            try
+            {
+                Connect();
+                Send(message);
+                Disconnect();
+            }
+            catch(Exception e)
+            {
+                // Срабатывает, если какое-либо из действий блока try не удалось выполнить после трех попыток
+                TCPExceptionOccured?.Invoke(this, new ExceptionArgs("Socket error at port " + endpoint.Port + ": " + e.Message, "Sending message error"));
+            }
         }
 
         private void Connect()
         {
             client = new TcpClient();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
                 try
                 {
@@ -46,10 +54,11 @@ namespace MSD.Library.TCP
                 }
                 catch (Exception) { }
             }
+            client.Connect(endpoint);
         }
         private void Send(string message)
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
                 try
                 {
@@ -58,10 +67,11 @@ namespace MSD.Library.TCP
                 }
                 catch (Exception) { }
             }
+            client.Send(message);
         }
         private void Disconnect()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
                 try
                 {
@@ -71,6 +81,8 @@ namespace MSD.Library.TCP
                 }
                 catch (Exception) { }
             }
+            client.Client.Disconnect(false);
+            client.Dispose();
         }
 
 

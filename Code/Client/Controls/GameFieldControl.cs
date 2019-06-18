@@ -38,7 +38,7 @@ namespace MSD.Client.Controls
                     if (control.Name == "button" + (e.Places[j] + 1))
                     {
                         string text_new = "";
-                        text_new = "Стадия " + (int)Stage.Wakes;
+                        text_new = "Stage " + (int)Stage.Wakes;
 
                         // потокобезопасное изменение текста кнопки
                         Invoke((MethodInvoker)delegate ()
@@ -63,9 +63,9 @@ namespace MSD.Client.Controls
                     {
                         string text_new = "";
                         if (e.Stage_new == Stage.Sleeps)
-                            text_new = "Могила " + (e.Place + 1);
+                            text_new = "Grave " + (e.Place + 1);
                         else
-                            text_new = "Стадия " + (int)e.Stage_new;
+                            text_new = "Stage " + (int)e.Stage_new;
 
                     // потокобезопасное изменение текста кнопки
                     Invoke((MethodInvoker)delegate ()

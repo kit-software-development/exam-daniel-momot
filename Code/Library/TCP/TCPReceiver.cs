@@ -40,15 +40,7 @@ namespace MSD.Library.TCP
                 // блокирует текущий поток исполнения до получения сообщения. может быть остановлен только извне
                 if (client != null)
                 {
-                    for(int i=0; i<3; i++)
-                    {
-                        try
-                        {
-                            message = client.ReceiveTextMessage();
-                            break;
-                        }
-                        catch (Exception) { }
-                    }
+                    message = Receive(client);
                     client.Close();
                 }
                 listener.Stop();
@@ -58,6 +50,20 @@ namespace MSD.Library.TCP
                 TCPExceptionOccured?.Invoke(this, new ExceptionArgs("Socket error at port " + endpoint.Port, "Accepting message error"));
             }
             return message;
+        }
+
+
+        private string Receive(TcpClient client)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                try
+                {
+                    return client.ReceiveTextMessage();
+                }
+                catch (Exception) { }
+            }
+            return null;
         }
 
     }

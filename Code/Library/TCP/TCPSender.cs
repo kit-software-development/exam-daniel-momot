@@ -29,43 +29,51 @@ namespace MSD.Library.TCP
         /// <param name="message">Текст сообщения. В рамках данного приложения - команда</param>
         public void SendMessage(string message)
         {
-            try
+            Connect();
+            Send(message);
+            Disconnect();
+        }
+
+        private void Connect()
+        {
+            client = new TcpClient();
+            for (int i = 0; i < 10; i++)
             {
-                client = new TcpClient();
-                for (int i = 0; i < 10; i++)
+                try
                 {
-                    try
-                    {
-                        client.Connect(endpoint);
-                        break;
-                    }
-                    catch (Exception) { }
+                    client.Connect(endpoint);
+                    break;
                 }
-                for (int i = 0; i < 10; i++)
-                {
-                    try
-                    {
-                        client.Send(message);
-                        break;
-                    }
-                    catch (Exception) { }
-                }
-                for (int i = 0; i < 10; i++)
-                {
-                    try
-                    {
-                        client.Client.Disconnect(false);
-                        client.Dispose();
-                        break;
-                    }
-                    catch (Exception) { }
-                }
-            }
-            catch (Exception e)
-            {
-                TCPExceptionOccured?.Invoke(this, new ExceptionArgs(e.Message, "Ошибка передачи данных"));
+                catch (Exception) { }
             }
         }
+        private void Send(string message)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                try
+                {
+                    client.Send(message);
+                    break;
+                }
+                catch (Exception) { }
+            }
+        }
+        private void Disconnect()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                try
+                {
+                    client.Client.Disconnect(false);
+                    client.Dispose();
+                    break;
+                }
+                catch (Exception) { }
+            }
+        }
+
+
 
     }
 
